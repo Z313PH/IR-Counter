@@ -1,6 +1,6 @@
 # ESP32 Temperature and Humidity Monitoring Station
 
-![Project Image](project_image.jpg)
+
 
 ## Overview
 
@@ -24,8 +24,7 @@ This project utilizes an ESP32 board to create a temperature and humidity monito
 
 ## Circuit Diagram
 
-![Circuit Diagram](circuit_diagram.jpg)
-
+![Circuit Diagram](Circuit Diagram.png)
 ## Pin Configuration
 
 | LCD Pin | ESP32 Pins |
