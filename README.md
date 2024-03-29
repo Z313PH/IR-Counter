@@ -1,65 +1,47 @@
-# ESP32 Temperature and Humidity Monitoring Station
+# IR Counter and "Marble Sorter"
 
 
 
 ## Overview
 
-This project utilizes an ESP32 board to create a temperature and humidity monitoring station. The station periodically measures temperature and humidity and displays the readings on a 16x2 LCD screen. It combines two separate Arduino setups into a single one, integrating an LCD screen and a DHT11 sensor.
+This project implements an IR Break Beam sensor to count objects and sort them into two separate directions using a servo mechanism. The setup is designed to divide objects into groups of ten, directing each group alternately to the right and left.
 
-## Features
+## Functionality
 
-- Real-time monitoring of temperature and humidity.
-- Easy-to-understand visual display on LCD screen.
-- Adjustable contrast for LCD screen.
-- Simple setup using readily available components.
+- Utilizes an IR Break Beam sensor to accurately count objects passing through.
+- Sorts objects into two directions using a servo mechanism.
+- Ideal for scenarios requiring precise counting and sorting, such as sorting marbles into groups.
 
-## Components Used
+## Implementation
 
-- ESP32 board
-- DHT11 sensor
-- 16x2 LCD screen
-- Potentiometer (for contrast adjustment)
-- Breadboard
-- Power supply
+Imagine a scenario where marbles are being sorted into groups of ten. As marbles move down a track, the IR sensor counts them. Once it detects a group of ten marbles, the servo directs them off the track to the right. The next group of ten marbles is then directed off the track to the left. This process repeats continuously.
+
+## Setup Considerations
+
+- While it's not mandatory to build the physical mechanism, considering it in a working scenario can aid in understanding the functionality.
+- Visualize a track along which objects are moving, with the IR sensor positioned to count them, and the servo to divert them based on the count.
+
+## Components Needed
+
+- IR Break Beam sensor
+- Servo motor
+- Microcontroller (e.g., Arduino)
+- Objects to be counted and sorted (e.g., marbles)
 
 ## Circuit Diagram
+<img width="590" alt="Circuit Diagram" src="https://github.com/Z313PH/IR-Counter/assets/119972119/c9ee2638-22d4-4cb0-9ad5-9dc4e7f24da6">
 
-<img width="590" alt="Circuit Diagram" src="https://github.com/Z313PH/IR-Counter/assets/119972119/c63106b1-0878-412a-bd86-22bb353e6a49">
 
-## Pin Configuration
+## Implementation Details
 
-| LCD Pin | ESP32 Pins |
-|---------|------------|
-| VSS     | GND        |
-| VDD     | 5V         |
-| V0      | 10K potentiometer (middle pin) |
-| RS      | GPIO 19    |
-| RW      | GND        |
-| E       | GPIO 23    |
-| D4      | GPIO 18    |
-| D5      | GPIO 17    |
-| D6      | GPIO 16    |
-| D7      | GPIO 15    |
-| A       | 5V         |
-| K       | GND        |
-
-## Sensor Connection
-
-The DHT11 sensor is connected to the power, and its data pin is connected to Pin D4 on the ESP32 board.
-
-## Setup Instructions
-
-1. Connect the components as per the provided circuit diagram.
-2. Upload the Arduino code provided in the repository to the ESP32 board.
-3. Adjust the contrast of the LCD screen using the potentiometer.
-4. Power on the system.
+- Configure the IR sensor to detect objects passing through its beam.
+- Program the microcontroller to count objects and trigger the servo when a predetermined count is reached.
+- Design the servo mechanism to divert objects to the appropriate direction based on the count.
 
 ## Repository Contents
 
-- **Arduino Code**: Contains the code necessary to run the temperature and humidity monitoring station on the ESP32 board.
-- **Circuit Diagram**: Illustrates the wiring connections between components.
-- **Project Image**: Image showcasing the completed setup.
-- **Video**: Demonstrates the Arduino code and setup in action.
+- **Arduino Code**: Contains the code necessary to implement the object counting and sorting mechanism.
+- **Project Image**: Illustration or image depicting the conceptual setup of the project.
 
 ## License
 
@@ -67,6 +49,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-- Special thanks to the contributors of the tutorials that provided guidance on integrating the LCD screen and DHT11 sensor into the ESP32 setup.
+- This project was inspired by the need for automated counting and sorting mechanisms in various industrial and recreational settings.
 
-Feel free to contribute, report issues, or suggest improvements! Happy monitoring! 🌡️🌿
+Feel free to contribute, report issues, or suggest improvements! Happy sorting! 🎲🤖
