@@ -24,7 +24,7 @@ This project utilizes an ESP32 board to create a temperature and humidity monito
 
 ## Circuit Diagram
 
-![Circuit Diagram](Circuit Diagram.png)<img width="590" alt="Circuit Diagram" src="https://github.com/Z313PH/IR-Counter/assets/119972119/c63106b1-0878-412a-bd86-22bb353e6a49">
+<img width="590" alt="Circuit Diagram" src="https://github.com/Z313PH/IR-Counter/assets/119972119/c63106b1-0878-412a-bd86-22bb353e6a49">
 
 ## Pin Configuration
 
